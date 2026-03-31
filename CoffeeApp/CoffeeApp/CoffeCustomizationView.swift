@@ -45,7 +45,7 @@ struct CoffeeCustomizationView: View {
                                 .font(.title3)
                         }
                         
-                        Text("₹\(coffee.getPrice())")
+                        Text("₹ \(coffee.getPrice(), specifier: "%.2f")")
                             .font(.largeTitle)
                             .bold()
                             .foregroundColor(.green)

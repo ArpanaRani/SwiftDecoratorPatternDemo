@@ -28,13 +28,11 @@ struct CoffeeSelectionView: View {
                 }
                 
                 // Coffee List
-                
-              //  ForEach(Array(viewModel.coffeeList.enumerated()), id: \.offset) { _, coffee in
                 ForEach(viewModel.coffeeList, id: \.id) { coffee in
                     HStack {
                         VStack(alignment: .leading) {
                             Text(coffee.name )
-                            Text("₹\(coffee.getPrice())")
+                            Text("₹ \(coffee.getPrice(), specifier: "%.2f")")
                                 .font(.caption)
                                 .foregroundColor(.gray)
                         }
